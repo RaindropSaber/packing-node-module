@@ -1,28 +1,40 @@
 {
-  "name": "packing-node-module",
-  "version": "0.0.1",
-  "description": "packing node_module to a files",
-  "main": "lib/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/RaindropSaber/packing-node-module.git"
-  },
-  "keywords": [
-    "package",
-    "module",
-    "require",
-    "commonjs"
-  ],
-  "author": "raindropsaber@gmail.com",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/RaindropSaber/packing-node-module/issues"
-  },
-  "homepage": "https://github.com/RaindropSaber/packing-node-module#readme",
-  "devDependencies": {
-    "typescript": "^4.6.4"
-  }
+	"name": "packing-node-module",
+	"version": "1.0.1",
+	"description": "Packing npm node_modules or custome file to a commonjs bundle. \nCan be used with require-from-remote",
+	"main": "lib/index.js",
+	"bin": {
+		"pnm": "bin/pnm"
+	},
+	"scripts": {
+		"build": "tsc",
+		"watch": "tsc -w",
+		"prepublish": "npm run build",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/RaindropSaber/packing-node-module.git"
+	},
+	"keywords": [
+		"package",
+		"module",
+		"require",
+		"commonjs"
+	],
+	"author": "raindropsaber@gmail.com",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/RaindropSaber/packing-node-module/issues"
+	},
+	"homepage": "https://github.com/RaindropSaber/packing-node-module#readme",
+	"devDependencies": {
+		"require-from-remote": "^1.0.2",
+		"typescript": "^4.6.4"
+	},
+	"dependencies": {
+		"memfs": "^3.4.1",
+		"react": "^18.1.0",
+		"webpack": "^5.72.0"
+	}
 }

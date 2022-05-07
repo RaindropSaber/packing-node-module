@@ -1,0 +1,19 @@
+#!/usr/bin/env node
+const build = require('../lib')
+const path = require('path')
+let file = './index'
+let config = {}
+
+if (process.argv[2]) {
+	file = process.argv[2]
+}
+if (process.argv[3]) {
+	config = require(path.resolve(process.cwd(), process.argv[3]))
+}
+build(file, config)
+	.then((code) => {
+		process.stdout.write(code, () => process.exit(0))
+	})
+	.catch((err) => {
+		process.stdout.write(JSON.stringify(err), () => process.exit(1))
+	})
