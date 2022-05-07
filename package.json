@@ -1,0 +1,28 @@
+{
+  "name": "packing-node-module",
+  "version": "0.0.1",
+  "description": "packing node_module to a files",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RaindropSaber/packing-node-module.git"
+  },
+  "keywords": [
+    "package",
+    "module",
+    "require",
+    "commonjs"
+  ],
+  "author": "raindropsaber@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RaindropSaber/packing-node-module/issues"
+  },
+  "homepage": "https://github.com/RaindropSaber/packing-node-module#readme",
+  "devDependencies": {
+    "typescript": "^4.6.4"
+  }
+}
